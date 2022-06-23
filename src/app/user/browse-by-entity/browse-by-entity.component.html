@@ -1,0 +1,39 @@
+<p>browse-by-entity works!</p>
+<div class="container" >
+
+    <div class="table-responsive">
+    <table class="table table-bordered ">
+        <thead>
+            <tr>
+                <th class="hidden">orgId</th>
+                <th>orgName</th>
+                <th>orgContactDetails</th>
+                <th>orgLocation</th>
+                <th>approvalStatus</th>
+                <th>orgNetCapital</th>
+                <th>orgEconomicRiskScore</th>
+                <th>orgIndustryRiskScore</th>
+                <th>orgRating</th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let o of orgRep">
+                <td class="hidden">{{o.orgId}}</td>
+                <td>{{o.orgName}}</td>
+                <td>{{o.orgContactDetails}}</td>
+                 <td>{{o.orgLocation}}</td>
+                <td>{{o.approvalStatus}}</td>
+                <td>{{o.orgNetCapital}}</td>
+                <td>{{o.orgEconomicRiskScore}}</td>
+                <td>{{o.orgIndustryRiskScore}}</td>
+                <td>{{o.orgRating}}</td>
+            
+                </tr>
+            </tbody>
+    </table>
+
+    </div>
+
+    <form>
+        <input type="button" value="Go back!" onclick="history.back()">
+       </form>

@@ -1,1 +1,19 @@
-<p>user works!</p>
+<h4 style="align-items: center;">Welcome to User Interface</h4>
+<nav class='navbar navbar-expand navbar-light bg-light'>
+    <a class='navbar-brand'></a>
+    <ul class='nav nav-pills' >
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/userRegistration' style="margin-left: 87px ">User Registration</a></li>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/getUserDetail' >UserRegistrationDetail</a></li>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/browseByEntity' >Browse By Org Entity</a></li>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/browsebyentityid' >Browse By Entity id</a></li>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/feedback' >Feedback</a></li>
+      
+      
+    </ul>
+</nav>
+
+<div class='container'>
+  <p>user works!</p>
+  
+    <router-outlet></router-outlet>
+  </div>

@@ -1,0 +1,52 @@
+<p>feedback works!</p>
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Feed Back</h2>
+
+    <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="userId">User Id</label>
+            <input type="number" formControlName="userId" placeholder="UserId" name="userId" class="form-control"
+                id="userId">
+        </div> 
+       
+
+        <div class="form-group">
+            <label for="orgName">Organization Name</label>
+            <input type="text" formControlName="orgName" placeholder="orgName"
+                name="orgName" class="form-control" id="orgName">
+                <div *ngIf="!orgName?.valid&&(orgName?.dirty||orgName?.touched)">
+                    <div [hidden]="!orgName?.errors?.['required']"  style="color: red;" class="alert alert-danger" >
+                        Organization Name is required</div>
+                   </div>
+        </div>
+
+        <div class="form-group">
+            <label for="userName">UserName</label>
+            <input type="text" formControlName="userName" placeholder="userName" name="userName" class="form-control" id="userName">
+            <div *ngIf="!userName?.valid&&(userName?.dirty||userName?.touched)">
+                <div [hidden]="!userName?.errors?.['required']"  style="color: rgb(0, 119, 255);" class="alert alert-danger" >
+                    User Name is required</div>
+               </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <input type="text" formControlName="comment" placeholder="comment" name="comment" class="form-control"
+                id="comment">
+                <div *ngIf="!comment?.valid&&(comment?.dirty||comment?.touched)">
+                    <div [hidden]="!comment?.errors?.['required']"  style="color: rgb(0, 119, 255);" class="alert alert-danger" >
+                         Please comment !!</div>
+                   </div>
+        </div>
+
+
+        
+
+        <br>
+        <button class="btn btn-success" [disabled]="feedbackForm.invalid" >Submit</button>
+        
+    </form>
+</div>

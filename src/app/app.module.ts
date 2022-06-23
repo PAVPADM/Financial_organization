@@ -1,6 +1,6 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UserComponent } from './user/user.component';
 import { OrgrepresentationComponent } from './orgrepresentation/orgrepresentation.component';
 import { FinanceTeamComponent } from './finance-team/finance-team.component';
+import { UserRegistrationComponent } from './user/user-registration/user-registration.component';
+import { BrowseByEntityComponent } from './user/browse-by-entity/browse-by-entity.component';
+import { BrowsebyEntityIDComponent } from './user/browseby-entity-id/browseby-entity-id.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { FeedbackComponent } from './user/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,19 @@ import { FinanceTeamComponent } from './finance-team/finance-team.component';
     WelcomeComponent,
     UserComponent,
     OrgrepresentationComponent,
-    FinanceTeamComponent
+    FinanceTeamComponent,
+    UserRegistrationComponent,
+    BrowseByEntityComponent,
+    BrowsebyEntityIDComponent,
+    UserListComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
