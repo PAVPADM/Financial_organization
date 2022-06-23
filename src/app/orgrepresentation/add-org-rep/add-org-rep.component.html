@@ -1,0 +1,89 @@
+<p>add-org-rep works!</p>
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Organization Registration Form</h2>
+
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="orgname">Organization Name:</label>
+      <input type="text" formControlName="orgname" placeholder="Organization Name" name="orgname" class="form-control"
+        id="orgname">
+        <div *ngIf="!orgname?.valid&&(orgname?.dirty||orgname?.touched)">
+          <div [hidden]="!orgname?.errors?.['required']"  style="color: red;" >
+            Enter your Organization Name*
+            </div>
+         </div>
+    </div>
+
+      <div class="form-group">
+        <label for="orgContactDetails">Contact Details:</label>
+        <input type="text" formControlName="orgContactDetails" placeholder="orgContactDetails" name="orgContactDetails"
+          class="form-control" id="orgContactDetails">
+          <div *ngIf="!orgContactDetails?.valid&&(orgContactDetails?.dirty||orgContactDetails?.touched)">
+            <div [hidden]="!orgContactDetails?.errors?.['required']"  style="color: red;" >
+              Enter Organization Contact Details*
+              </div>
+           </div>
+      </div>
+
+        <div class="form-group">
+          <label for="orgLocation">Location:</label>
+          <input type="text" formControlName="orgLocation" placeholder="orgLocation" name="orgLocation"
+            class="form-control" id="orgLocation">
+            <div *ngIf="!orgLocation?.valid&&(orgLocation?.dirty||orgLocation?.touched)">
+              <div [hidden]="!orgLocation?.errors?.['required']"  style="color: red;"  >
+                Enter your Organization Location*
+                </div>
+             </div>
+        </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" formControlName="password" placeholder="password" name="password"
+              class="form-control" id="password">
+              <div *ngIf="!password?.valid&&(password?.dirty||password?.touched)">
+                <div [hidden]="!password?.errors?.['required']"  style="color: red;"  >
+                  Enter Password*
+                  </div>
+               </div>
+          </div>
+
+            <div class="form-group">
+              <label for="orgNetCapital">Net Capital:</label>
+              <input type="text" formControlName="orgNetCapital" placeholder="orgNetCapital" name="orgNetCapital"
+                class="form-control" id="orgNetCapital">
+                <div *ngIf="!orgNetCapital?.valid&&(orgNetCapital?.dirty||orgNetCapital?.touched)">
+                  <div [hidden]="!orgNetCapital?.errors?.['required']"  style="color: red;"  >
+                    Enter Organization Net-Capital*
+                    </div>
+                 </div>
+            </div>
+
+              <div class="form-group">
+                <label for="orgEconomicRiskScore">EconomicRiskScore:</label>
+                <input type="text" formControlName="orgEconomicRiskScore" placeholder="orgEconomicRiskScore"
+                  name="orgEconomicRiskScore" class="form-control" id="orgEconomicRiskScore">
+                  <div *ngIf="!orgEconomicRiskScore?.valid&&(orgEconomicRiskScore?.dirty||orgEconomicRiskScore?.touched)">
+                    <div [hidden]="!orgEconomicRiskScore?.errors?.['required']"  style="color: red;"  >
+                      Enter Organization Economic-Risk-Score*
+                      </div>
+                   </div>
+              </div>
+
+                <div class="form-group">
+                  <label for="orgIndustryRiskScore">IndustryRiskScore:</label>
+                  <input type="text" formControlName="orgIndustryRiskScore" placeholder="orgIndustryRiskScore"
+                    name="orgIndustryRiskScore" class="form-control" id="orgIndustryRiskScore">
+                    <div *ngIf="!orgIndustryRiskScore?.valid&&(orgIndustryRiskScore?.dirty||orgIndustryRiskScore?.touched)">
+                      <div [hidden]="!orgIndustryRiskScore?.errors?.['required']"  style="color: red;"  >
+                        Enter Organization Industry-Risk-Score*
+                        </div>
+                     </div>
+                </div>
+
+              
+                  <br>
+                  <button class="btn btn-success">Submit</button>
+                  <button class="btn btn-success" (click)="back()" style="margin-left: 400px ">Back</button>
+  </form>
+</div>

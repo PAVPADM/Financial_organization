@@ -1,0 +1,38 @@
+<p>get-by-id works!</p>
+<div>
+    <h3>Enter the OrgId</h3>
+    <input type="number" [(ngModel)]="id">
+</div>
+<button (click)="getByEntityId()">Submit</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Organization Id</th>
+            <th>Organization Name</th>
+            <th> Location</th>
+            <th>Contact Details</th>
+            <th>Approval Status</th>
+            <th>IndustryRiskScore</th>
+            <th>EconomicRiskScore</th>
+            <th>Net Capital</th>
+            <th>Rating</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{orgrep.orgId}}</td>
+            <td>{{orgrep.orgName}}</td>
+            <td>{{orgrep.orgLocation}}</td>
+            <td>{{orgrep.orgContactDetails}}</td>
+            <td>{{orgrep.approvalStatus}}</td>
+            <td>{{orgrep.orgIndustryRiskScore}}</td>
+            <td>{{orgrep.orgEconomicRiskScore}}</td>
+            <td>{{orgrep.orgNetCapital}}</td>
+            <td>{{orgrep.orgRating}}</td>
+            
+        </tr>
+    </tbody>
+
+
+</table>
