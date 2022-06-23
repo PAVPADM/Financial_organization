@@ -1,0 +1,67 @@
+<p>user-registration works!</p>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="col-md-6 user-container">
+    <h2 class="text-center">User Registration</h2>
+
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="userName">User Name:</label>
+            <input type="text" formControlName="userName" placeholder="UserName" name="userName" class="form-control"
+                id="userName">
+               
+                
+        </div>
+       
+
+        <div class="form-group">
+            <label for="userContactDetails">Contact Deatails:</label>
+            <input type="number" formControlName="userContactDetails" placeholder="ContactDetails"
+                name="userContactDetails" class="form-control" id="userContactDetails">
+                
+        </div>
+
+        <div class="form-group">
+            <label for="role">Role:</label>
+            <input type="text" formControlName="role" placeholder="role" name="role" class="form-control" id="role">
+        </div>
+
+        <div class="form-group">
+            <label for="password">password</label>
+            <input type="password" formControlName="password" placeholder="password" name="password" class="form-control"
+                id="password">
+        </div>
+        
+        <!-- <div class="btn-group dropright">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="city" name="city"  formControlName="city">
+              Dropright
+            </button>
+            <div class="dropdown-menu">
+               Dropdown menu links 
+              <option  *ngFor="let city of cityList ">
+                {{city}}
+              </option>
+            </div>
+          </div> -->
+
+
+        <div class="form-group" >
+            <label for="city">City:</label>&nbsp;&nbsp;
+        
+                <br>
+            <select id="city" name="city"  formControlName="city"  style="border-color: burlywood;">
+            
+                <option  *ngFor="let city of cityList ">
+                  {{city}}
+                </option>
+              </select>
+        
+        </div>
+
+        <br>
+
+        <br>
+        <button class="btn btn-success" [disabled]="userForm.invalid">Submit</button>
+        
+    </form>
+</div>
