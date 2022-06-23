@@ -1,0 +1,35 @@
+<form [formGroup]="updateForm" (ngSubmit)="updateRating()">
+    <fieldset>
+        <table>
+            <tr>
+                <th>Orgid</th>
+                <th>:</th>
+                <th><input type="text" class="form-control" formControlName="orgId" readonly>
+                    <span class="mandatory"> </span></th>   
+                             
+            </tr>
+            <tr>
+                <th>orgRating</th>
+                <th>:</th>
+                <th><input type="text"  class="form-control" formControlName="orgRating" >
+             </th>
+
+             <tr
+             *ngIf="updateForm.get('orgRating')?.hasError('required') && updateForm.get('orgRating')?.touched ">
+             <span  class="mandatory " >*orgRating is mandatory</span>
+             
+            </tr>       
+            <tr>
+                <th>approvalstatus</th>
+                <th>:</th>
+                <th><input type="text"  class="form-control" formControlName="approvalStatus" >
+                    <span class="mandatory"> </span></th> 
+            </tr>
+            </table>
+            <br>
+               
+                <button type = "submit" class = "buttons" [disabled]="!updateForm.valid">
+                    update
+                </button>
+    </fieldset>
+</form>
