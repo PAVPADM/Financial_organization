@@ -9,8 +9,16 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UserComponent } from './user/user.component';
 import { OrgrepresentationComponent } from './orgrepresentation/orgrepresentation.component';
 import { FinanceTeamComponent } from './finance-team/finance-team.component';
+<<<<<<< HEAD
 import { UpdateComponent } from './finance-team/update/update.component';
 import { OrganizationDetailsComponent } from './finance-team/organization-details/organization-details.component';
+=======
+import { UserRegistrationComponent } from './user/user-registration/user-registration.component';
+import { BrowseByEntityComponent } from './user/browse-by-entity/browse-by-entity.component';
+import { BrowsebyEntityIDComponent } from './user/browseby-entity-id/browseby-entity-id.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { FeedbackComponent } from './user/feedback/feedback.component';
+>>>>>>> 1281e8e0691826be77a20cdcce64c81d4af3257b
 
 @NgModule({
   declarations: [
@@ -19,8 +27,16 @@ import { OrganizationDetailsComponent } from './finance-team/organization-detail
     UserComponent,
     OrgrepresentationComponent,
     FinanceTeamComponent,
+<<<<<<< HEAD
     UpdateComponent,
     OrganizationDetailsComponent
+=======
+    UserRegistrationComponent,
+    BrowseByEntityComponent,
+    BrowsebyEntityIDComponent,
+    UserListComponent,
+    FeedbackComponent
+>>>>>>> 1281e8e0691826be77a20cdcce64c81d4af3257b
   ],
   imports: [
     BrowserModule,
