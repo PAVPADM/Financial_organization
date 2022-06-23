@@ -1,0 +1,38 @@
+<div class="container" >
+
+    <div class="table-responsive">
+    <table class="table table-bordered ">
+        <thead>
+            <tr>
+                <th>orgId</th>
+                <th>orgName</th> 
+                <th> orgContactDetails</th>             
+                <th>orgLocation</th>
+                <th>approvalStatus</th>
+                <th>orgNetCapital</th>
+                <th>orgEconomicRiskScore</th>
+                <th>orgIndustryRiskScore</th>
+                <th>orgRating</th>
+                </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let o of organizationList">
+               <td id="orgId" value="1">{{o.orgId}}</td>
+               <td>{{o.orgName}}</td> 
+               <td>{{o.orgContactDetails}}</td>              
+                <td>{{o.orgLocation}}</td>                
+                <td>{{o.approvalStatus}}</td>
+                <td>{{o.orgNetCapital}}</td>
+                <td>{{o.orgEconomicRiskScore}}</td>
+                <td>{{o.orgIndustryRiskScore}}</td>
+                <td>{{o.orgRating}}</td>   
+                <td><button type="button" (click)="editOrganization(o.orgId)">edit</button>         
+                </tr>
+            </tbody>
+            
+    </table>
+    
+
+    
+
+
